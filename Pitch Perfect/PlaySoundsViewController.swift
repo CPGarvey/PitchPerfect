@@ -11,10 +11,15 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
 
+    // MARK: - Properties
+    
     var audioPlayer: AVAudioPlayer!
     var receivedAudio: RecordedAudio!
     var audioEngine: AVAudioEngine!
     var audioFile: AVAudioFile!
+    
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +30,9 @@ class PlaySoundsViewController: UIViewController {
         audioEngine = AVAudioEngine()
         audioFile = try! AVAudioFile(forReading: receivedAudio.filePathUrl)
     }
+    
+    
+    // MARK: - Actions
     
     @IBAction func playSlowAudio(sender: UIButton) {
         playAudioWithVariableSpeed(0.5)
@@ -79,6 +87,14 @@ class PlaySoundsViewController: UIViewController {
         audioPlayerNode.play()
     }
     
+    @IBAction func stopAudio(sender: UIButton) {
+        audioPlayer.stop()
+        audioEngine.stop()
+    }
+    
+    
+    // MARK: - Helper Functions
+    
     func playAudioWithVariableSpeed(speed: Float) {
         resetAudio()
         
@@ -112,8 +128,4 @@ class PlaySoundsViewController: UIViewController {
         audioEngine.reset()
     }
     
-    @IBAction func stopAudio(sender: UIButton) {
-        audioPlayer.stop()
-        audioEngine.stop()
-    }
 }
