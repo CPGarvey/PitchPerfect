@@ -19,7 +19,7 @@ class PlaySoundsViewController: UIViewController {
     var audioFile: AVAudioFile!
     
     
-    // MARK: - Lifecycle
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()

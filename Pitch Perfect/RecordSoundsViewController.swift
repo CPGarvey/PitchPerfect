@@ -27,7 +27,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     let recordImage = UIImage(named: "microphone")
     
     
-    // MARK: - Lifecycle
+    // MARK: - Life Cycle
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
