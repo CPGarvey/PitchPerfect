@@ -1,5 +1,7 @@
 # Pitch Perfect
 
+CURRENTLY UNDERGOING REVISIONS TO MAKE SWIFT 3+ COMPLIANT!
+
 ## About
 
 - Two-view iPhone app written in Swift that records a conversation then presents options to slow down, speed up, raise the pitch, lower the pitch, add reverb, or add echo to the recorded voices
